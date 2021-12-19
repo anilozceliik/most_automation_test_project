@@ -31,6 +31,9 @@ dependencies:
     sdk: flutter
   kartal: ^2.2.0
   dio: ^4.0.4
+  http: ^0.13.4
+
+
 
 
   # The following adds the Cupertino Icons font to your application.

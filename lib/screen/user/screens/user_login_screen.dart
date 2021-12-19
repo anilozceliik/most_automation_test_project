@@ -1,7 +1,9 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_most_test_project/core/services/api_services.dart';
 import 'package:flutter_most_test_project/screen/dashboard/home.dart';
 import 'package:kartal/kartal.dart';
+
 
 class UserLogin extends StatefulWidget {
   const UserLogin({Key? key}) : super(key: key);
@@ -128,7 +130,21 @@ class _UserLoginState extends State<UserLogin> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => Home()));
-                          }
+                          }else
+                            showDialog(
+                              barrierDismissible: false,
+                                context: context, builder: (BuildContext context){
+                                return AlertDialog(
+                                  title: Text ("Warning"),
+                                  content: Text ("Incorrect login information"),
+                                  actions: <Widget>[
+                                    MaterialButton(
+                                      child: Text("Back"),
+                                      onPressed: () => Navigator.pop(context),
+                                    ),
+                                  ],
+                                );
+                            },);
                         },
                         child: Container(
                           alignment: Alignment.center,
