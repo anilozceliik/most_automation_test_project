@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_most_test_project/Tabbar/Tabbar.dart';
 import 'package:flutter_most_test_project/core/services/api_services.dart';
 import 'package:kartal/kartal.dart';
 import 'package:flutter_most_test_project/veri/veri.dart';
@@ -25,7 +26,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return
+    return tabbar(
       Scaffold(
         body: Container(
           width: context.width,
@@ -233,6 +234,7 @@ class _HomeState extends State<Home> {
             ),
           ),
         ),
+    ),
     );
   }
 }
